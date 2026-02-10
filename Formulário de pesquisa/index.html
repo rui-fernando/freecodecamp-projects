@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de pesquisa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Pesquisa de satisfação</h1>
+    <p id="description">Queremos saber sua opinião</p>
+    
+    <form id="survey-form">
+
+        <!-- Nome -->
+        <label id="name-label" for="name">
+            Nome:
+        </label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Digite seu nome"
+            required
+        >
+
+        <!-- Email -->
+        <label id="email-label" for="email">
+            Email:
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu email"
+            required
+        >
+
+        <!-- Número -->
+        <label id="number-label" for="number">
+            Idade:
+        </label>
+        <input
+            type="number"
+            id="number"
+            name="number"
+            placeholder="Digite sua idade"
+            min="1"
+            max="120"
+            required
+        >
+
+        <!-- Dropdown -->
+        <label for="dropdown">Qual sua área?</label>
+        <select id="dropdown" name="area" required>
+            <option value="">Selecione uma opção</option>
+            <option value="estudante">Estudante</option>
+            <option value="dev">Desenvolvedor</option>
+        </select>
+
+        <!-- Radio buttons -->
+        <p>Você recomendaria este curso?</p>
+
+        <label>
+            <input
+            type="radio"
+            name="recommend"
+            value="sim"
+            >
+            Sim
+        </label>
+
+        <label>
+            <input
+            type="radio"
+            name="recommend"
+            value="nao"
+            >
+            Não
+        </label>
+
+        <!-- Checkboxes -->
+        <p>Quais tecnologias você utiliza?</p>
+
+        <label>
+            <input
+            type="checkbox"
+            name="tech"
+            value="html"
+            >
+            HTML
+        </label>
+
+        <label>
+            <input
+            type="checkbox"
+            name="tech"
+            value="css"
+            >
+            CSS
+        </label>
+
+        <label>
+            <input
+            type="checkbox"
+            name="tech"
+            value="javascript"
+            >
+            JavaScript
+        </label>
+
+        <!-- Textarea -->
+        <label for="comments">Comentários adicionais:</label>
+            <textarea
+            id="comments"
+            name="comments"
+            placeholder="Deixe seu comentário aqui..."
+            ></textarea>
+        
+        <button id="submit" type="submit">
+            Enviar
+        </button>
+    </form>
+</body>
+</html>
