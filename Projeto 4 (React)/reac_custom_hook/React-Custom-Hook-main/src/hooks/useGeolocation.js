@@ -2,16 +2,16 @@ import { useState, useEffect } from "react";
 
 export function useGeolocation() {
     const [currentLocation, setCurrentLocation] = useState({});
-    
+
     useEffect(() => {
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                setCurrentLocation(position.coords);
-            },
-            (error) => {
-                console.log(error);
-            }
-        );
+        const onSuccess = (e) => {
+            setCurrentLocation({ latitude: e.coords.latitude.toFixed(3), 
+                longitude: e.coords.longitude.toFixed(3),
+            });
+        };
+        navigator.geolocation.getCurrentPosition(onSuccess);
+    
     }, []);
+    
     return currentLocation;
 }
